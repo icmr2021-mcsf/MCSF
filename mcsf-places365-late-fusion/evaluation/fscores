@@ -1,0 +1,25 @@
+import json
+import numpy as np
+
+n_splits = 5
+all_fscores = []
+best_epochs = {}
+for split in range(n_splits):
+    path = '../exp1/tvsum_non_overlapping/split{}/f_scores.txt'.format(split)
+
+    print(path)
+    with open(path, 'r') as infile:
+        data = json.load(infile)
+        # print(data)
+        print('split:{} , mean:{}'.format(split, np.mean(data)))
+        all_fscores.append(np.mean(data))
+        # median=np.argsort(data)[len(data) // 2]
+        best_epochs['split{}'.format(split)] = np.argmax(np.asarray(data))
+        # best_epochs['split{}'.format(split)] =median
+print('fscores.py for all splits: {}'.format(all_fscores))
+print('mean of  all fscores.py: {}'.format(np.mean(all_fscores)))
+print('median of  all fscores.py: {}'.format(np.median(all_fscores)))
+print('variance of  all fscores.py: {}'.format(np.var(all_fscores)))
+print('best epochs: {}'.format(best_epochs))
+
+
