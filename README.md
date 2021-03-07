@@ -2,7 +2,7 @@
 
 1. Reproduce unsupervised method CSNet and RL-method SUM-Ind.
 2. Evaluating [SUM-GAN-AAE](https://core.ac.uk/download/pdf/286400027.pdf), [SUM-GAN-sl](http://doi.acm.org/10.1145/3347449.3357482), [CSNet](https://ojs.aaai.org//index.php/AAAI/article/view/4872), and [SUM-Ind](http://www.openaccess.hacettepe.edu.tr:8080/xmlui/handle/11655/11953) using F1-score and rank correlation coefficients.
-2. Extending CSNet with features variation by applying fusion techniques.
+2. Implementing MCSF method.
 
 
 # Main Dependencies
@@ -28,9 +28,9 @@ Directory:
 - /src/evaluation (evaluation using F1-score and rank correlations coefficients)
 - /src/visualization 
 - /sum-ind (implementation of SUM-Ind method)
-- /CSNET-places365-early-fusion (Fusion variation based on CSNet)
-- /CSNET-places365-late-fusion (Fusion variation based on CSNet)
-- /CSNET-places365-intermediate-fusion (Fusion variation based on CSNet)
+- /mcsf-places365-early-fusion 
+- /mcsf-places365-late-fusion 
+- /mcsf-places365-intermediate-fusion
 
 ```
 # Datasets
