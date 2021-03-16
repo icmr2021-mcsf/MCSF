@@ -61,20 +61,12 @@ Original videos and annotations for each dataset are also available in the autho
 
 ### CSNet
 We used the implementation of [SUM-GAN](https://github.com/j-min/Adversarial_Video_Summary) method as a starting point to implement CSNet.
-
-#### How to train
 The implementation of CSNet is located under the directory csnet. Run main.py file with the configurations specified in configs.py to train the model.
 
 
 
 ### SUM-Ind
-Make splits
-```bash
-python create_split.py -d datasets/eccv16_dataset_summe_google_pool5.h5 --save-dir datasets --save-name summe_splits  --num-splits 5
-```
-As a result, the dataset is randomly split for 5 times, which are saved as json file.
-
-Train and test codes are written in `main.py`. To see the detailed arguments, please do `python main.py -h`.
+As a result, the dataset is randomly split for 5 times, which are saved as json file. Train and test codes are written in `main.py`. To see the detailed arguments, please do `python main.py -h`.
 
 #### How to train
 ```bash
